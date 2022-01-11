@@ -1,0 +1,7 @@
+/Notifications/.dockerignore
+.idea
+Notifications/wwwroot/lib/bootstrap
+Notifications/wwwroot/lib/jquery
+Notifications/wwwroot/lib/jquery-validation
+Notifications/wwwroot/lib/jquery-validation-unobtrusive
+.idea/.idea.Notifications/.idea
