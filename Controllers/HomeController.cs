@@ -15,10 +15,41 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        int hour = DateTime.Now.Hour;
+        string user = "дорогой пчеловод";
+        switch (hour)
+        {
+            case < 6:
+                ViewBag.Hello = $"Доброй ночи, {user} :)";
+                break;
+            case < 12:
+                ViewBag.Hello = $"Доброе утро, {user} :)";
+                break;
+            case > 18:
+                ViewBag.Hello = $"Добрый вечер, {user} :)";
+                break;
+            default:
+                ViewBag.Hello = $"Добрый день, {user} :)";
+                break;
+        }
         return View();
     }
 
-    public IActionResult Privacy()
+    [HttpGet]
+    public IActionResult RequestForm()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult RequestForm(Participant participant)
+    {
+        if (ModelState.IsValid)
+            return View("Accepted", participant);
+        return View();
+    }
+    
+    public IActionResult Schedule()
     {
         return View();
     }

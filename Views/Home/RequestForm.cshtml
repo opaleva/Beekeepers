@@ -1,0 +1,29 @@
+@model Participant
+@{
+    ViewData["Title"] = "Заявка участника";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Заявка на участие</h1>
+    <div class="application">
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary()
+            <pre>Имя, фамилия:   @Html.TextBoxFor(x => x.Name)</pre>
+            <pre>Город:          @Html.TextBoxFor(x => x.City)</pre>
+            <pre>Email:          @Html.TextBoxFor(x => x.Email)</pre>
+            <pre>Номер телефона: @Html.TextBoxFor(x => x.Phone)</pre>
+            <p>Придёте с пчёлами?
+                @Html.DropDownListFor(x => x.Expected, new[]
+                {
+                    new SelectListItem() { Text = "Да, возьму своих пчёл", Value = Boolean.TrueString},
+                    new SelectListItem() { Text = "Нет, буду без пчёл", Value = Boolean.FalseString}
+                })
+            </p>
+            <div class="btn btn-dark">
+                <input type="submit" value="Отправить заявку" class="app-btn" border="none"/>
+            </div>
+        }
+
+    </div>
+</div>
