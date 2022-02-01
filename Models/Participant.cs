@@ -1,9 +1,14 @@
 using System.ComponentModel.DataAnnotations;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+
 
 namespace Notifications.Models;
 
 public class Participant
 {
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
     [Required(ErrorMessage = "Анонимным участникам у нас не рады")]
     public string Name { get; set; }
     public string? City { get; set; }
