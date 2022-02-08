@@ -35,19 +35,7 @@ public class HomeController : Controller
         return View();
     }
 
-    [HttpGet]
-    public IActionResult RequestForm()
-    {
-        return View();
-    }
 
-    [HttpPost]
-    public IActionResult RequestForm(Participant participant)
-    {
-        if (ModelState.IsValid)
-            return View("Accepted", participant);
-        return View();
-    }
     
     // public IActionResult Schedule()
     // {

@@ -8,7 +8,8 @@
         <p>30 февраля у нас проходит конференция с приглашёнными гостями из Туркменистана.</p>
         <p>Если ты хочешь принять в ней участие, заполни форму:</p>
         <div class="btn btn-dark">
-            @Html.ActionLink("Заявка участника", "RequestForm", new { id=1 }, new { @class = "app-btn" })
+            <a class="app-btn" asp-area="" asp-controller="RequestForm" asp-action="Index">Заявка участника</a>
+            @* @Html.ActionLink("", "/Index", new {id = 1}, new {@class = "app-btn"}) *@
         </div>
     </div>
 </div>
