@@ -6,7 +6,7 @@ using MongoDB.Bson.Serialization.Attributes;
 namespace Notifications.Models;
 
 [BsonIgnoreExtraElements]
-public class Participant
+public class Beekeeper
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]

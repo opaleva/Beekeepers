@@ -14,10 +14,10 @@ public class RequestFormController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Index(Participant participant)
+    public IActionResult Index(Beekeeper beekeeper)
     {
         if (ModelState.IsValid)
-            return View("Accepted", participant);
+            return View("Accepted", beekeeper);
         return View();
     }
 }
