@@ -1,0 +1,73 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: #d0c0a9;
+  margin-bottom: 60px;
+}
+
+.navbar {
+  background-color: #ccb799;
+}
+
+.date {
+  right: 0;
+  margin-top: 20px;
+}
+
+.date p {
+  position: relative;
+  top: 75%;
+  left: 50%;
+  margin: 0 -50% 0 0;
+  transform: translate(-50%, -50%) }
+
+.application {
+  text-align: center;
+}
+
+.field-validation-error {
+  color: #f00;
+}
+
+.field-validation-valid {
+  display: none;
+}
+
+.input-validation-error {
+  border: 2px solid #a20505;
+  background-color: #fee;
+}
+
+.validation-summary-errors {
+  font-weight: bold;
+  color: #a20505;
+}
+
+.validation-summary-valid {
+  display: none;
+}
+
+.app-btn {
+  border: none;
+  background: none;
+  color: gold;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.app-btn:hover {
+  color: rgba(229, 211, 116, 0.98);
+}
