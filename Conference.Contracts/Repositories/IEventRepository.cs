@@ -5,11 +5,11 @@ namespace Conference.Contracts.Repositories;
 
 public interface IEventRepository : IRepository<Event>
 {
-    Task<Event> GetEventByIdAsync(string eventId);
+    Task<Event> GetBeekeeperByIdAsync(string eventId);
 
-    Task CreateEventAsync(CreateOrUpdateEventDto model);
+    Task CreateBeekeeperAsync(CreateOrUpdateEventDto model);
 
-    Task<Event> UpdateEventAsync(string id, CreateOrUpdateEventDto model);
+    Task<Event> UpdateBeekeeperAsync(string id, CreateOrUpdateEventDto model);
 
-    Task DeleteEventAsync(string id);
+    Task DeleteBeekeeperAsync(string id);
 }
